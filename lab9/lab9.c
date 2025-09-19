@@ -13,8 +13,14 @@ void main() {
                i++;
                portb = array[i];
                EEPROM_WRITE(0x00,i); //Write in EEPROM
-               delay_ms(10);
+               delay_ms(10);  
              }
+             // i++;
+             // if(i > 9){
+             //   i = 0;          --- for setting 9 to 0
+             // }
+             // EEPROM_WRITE(0x00,i);
+             // delay_ms(10); 
           }
        }
        if(portd.f1 == 1){
@@ -26,6 +32,12 @@ void main() {
                 EEPROM_WRITE(0x00,i); //Write in EEPROM
                 delay_ms(10);
              }
+             // i--;
+             // if(i < 0){
+             //   i = 9;           --- for setting 0 to 9
+             // }
+             // EEPROM_WRITE(0x00,i);
+             // delay_ms(10); 
           }
        }
        if( i > 9 || i < 0){
